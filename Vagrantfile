@@ -13,7 +13,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   config.vm.box = "bento/ubuntu-16.04"
   # The hostname for the VM
-  config.vm.hostname = "thirty.bees"
+  config.vm.hostname = "vagrant.denverprophit.us"
 
   # Disable automatic box update checking. If you disable this, then
   # boxes will only be checked for updates when the user runs
@@ -54,13 +54,13 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     v.gui=false
 
     # Memory
-    v.customize ["modifyvm", :id, "--memory", 1024]
+    v.customize ["modifyvm", :id, "--memory", 8192]
 
     # CPUs
-    v.customize ["modifyvm", :id, "--cpus", "1"]
+    v.customize ["modifyvm", :id, "--cpus", "4"]
 
     # Video Ram
-    v.customize ["modifyvm", :id, "--vram", "32"]
+    v.customize ["modifyvm", :id, "--vram", "128M"]
 
     # --hwvirtex on|off: This enables or disables the use of hardware virtualization
     # extensions (Intel VT-x or AMD-V) in the processor of your host system;
