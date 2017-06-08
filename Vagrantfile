@@ -60,7 +60,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     v.customize ["modifyvm", :id, "--cpus", "4"]
 
     # Video Ram
-    v.customize ["modifyvm", :id, "--vram", "128M"]
+    v.customize ["modifyvm", :id, "--vram", "128"]
 
     # --hwvirtex on|off: This enables or disables the use of hardware virtualization
     # extensions (Intel VT-x or AMD-V) in the processor of your host system;
